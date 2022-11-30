@@ -5,13 +5,16 @@ import './index.css';
 import './scss/bootstrap.scss'
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
+import UsePetShopContextProvider from './Context/PetShopContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <UsePetShopContextProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </UsePetShopContextProvider>
   </React.StrictMode>
 );
 

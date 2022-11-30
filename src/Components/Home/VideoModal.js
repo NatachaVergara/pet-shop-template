@@ -4,7 +4,7 @@ const VideoModal = () => {
     return (
 
         // {/* <!-- Video Modal Start --> */}
-        <div className="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="videoModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content rounded-0">
                     <div className="modal-header">
@@ -13,10 +13,8 @@ const VideoModal = () => {
                     </div>
                     <div className="modal-body">
                         {/* <!-- 16:9 aspect ratio --> */}
-
                         <div className="ratio ratio-16x9">
-                            <iframe className="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/07d2dXHYb94" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                 </div>
