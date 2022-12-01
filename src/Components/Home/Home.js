@@ -2,12 +2,15 @@ import React from 'react'
 import AboutHero from '../About/AboutHero'
 import ServiceCard from '../Services/ServiceCard'
 import Hero from './Hero'
+import Productos from './Productos'
 import VideoModal from './VideoModal'
 
 const HomeContainer = () => {
   return (
     <>
-      <section> <Hero /></section>
+      <section>
+        <Hero />
+      </section>
       <section>
         <VideoModal />
         <AboutHero />
@@ -22,6 +25,9 @@ const HomeContainer = () => {
             <ServiceCard />
           </div>
         </div>
+      </section>
+      <section>
+        <Productos/>
       </section>
 
     </>
