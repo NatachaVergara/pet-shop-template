@@ -15,7 +15,7 @@ const AboutHero = () => {
                     <div className="col-lg-7">
                         <div className="border-start border-5 border-primary ps-5 mb-5">
                             <h6 className="text-primary text-uppercase">Sobre nosotros</h6>
-                            <h1 className="display-5 text-uppercase mb-0">Manten feliz a tu mascota en todo momento</h1>
+                            <h6 className="display-5 text-uppercase mb-0 text-start">Manten feliz a tu mascota en todo momento</h6>
                         </div>
                         <h4 className="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
                         <div className="bg-light p-4">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
                             <h1 className="text-uppercase text-white mb-lg-4">Hace feliz a tus mascotas</h1>
                             <p className="fs-4 text-white mb-lg-4">Dolore tempor clita lorem rebum kasd eirmod dolore diam eos kasd. Kasd clita ea justo est sed kasd erat clita sea</p>
                             <div className="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                                <a href="" className="btn btn-outline-light border-2 py-md-3 px-md-5 me-5">Leer más</a>
+                                <Link to="/home" className="btn btn-outline-light border-2 py-md-3 px-md-5 me-5">Leer más</Link>
                                 <button type="button" className="btn-play" data-bs-toggle="modal"
                                     data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                                     <span></span>

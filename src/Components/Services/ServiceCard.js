@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useContextShop } from '../../Context/PetShopContext'
 
 const ServiceCard = () => {
@@ -9,12 +10,12 @@ const ServiceCard = () => {
         <>
             {serviceDataCard && serviceDataCard.map((card, index) => (
                 <div className="col-md-6" key={index}>
-                    <div className="service-item bg-light d-flex p-4">
+                    <div className="service-item bg-light d-flex p-4" >
                         <i className={card.icon}></i>
                         <div>
-                            <h5 className="text-uppercase mb-3">{card.title} </h5>
-                            <p>{card.text} </p>
-                            <a className="text-primary text-uppercase" href="">Read More<i className="bi bi-chevron-right"></i></a>
+                            <h5 className="text-uppercase text-start mb-3">{card.title} </h5>
+                            <p className='text-start'>{card.text} </p>
+                            <Link className="text-primary text-uppercase" to="/home">Mas información<i className="bi bi-chevron-right"></i></Link>
                         </div>
                     </div>
                 </div>
