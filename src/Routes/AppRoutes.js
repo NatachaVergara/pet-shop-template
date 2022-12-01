@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { useContextShop } from '../Context/PetShopContext'
 import Home from '../Views/Home'
 import NotFound from '../Views/NotFound'
 
