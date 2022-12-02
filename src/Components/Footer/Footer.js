@@ -29,11 +29,11 @@ const Footer = () => {
                             <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
                             <form action="">
                                 <div className="input-group">
-                                    <input type="text" className="form-control p-3" placeholder="Your Email" />
-                                    <button className="btn btn-primary">Sign Up</button>
+                                    <input type="text" className="form-control p-3" placeholder="Tu Email" />
+                                    <button className="btn btn-primary">Enviar</button>
                                 </div>
                             </form>
-                            <h6 className="text-uppercase mt-4 mb-3">Follow Us</h6>
+                            <h6 className="text-uppercase mt-4 mb-3">Nuestras redes</h6>
                             <div className="d-flex">
                                 <Link className="btn btn-outline-primary btn-square me-2" to='/home'><i className="bi bi-twitter"></i></Link>
                                 <Link className="btn btn-outline-primary btn-square me-2" to='/home'><i className="bi bi-facebook"></i></Link>
