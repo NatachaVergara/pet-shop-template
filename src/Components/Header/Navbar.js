@@ -13,10 +13,10 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav ms-auto py-0">
                     <a href="index.html" className="nav-item nav-link active">Home</a>
-                    <a href="about.html" className="nav-item nav-link">About</a>
-                    <a href="service.html" className="nav-item nav-link">Service</a>
-                    <a href="product.html" className="nav-item nav-link">Product</a>
-                    <div className="nav-item dropdown">
+                    <a href="about.html" className="nav-item nav-link">El equipo</a>
+                    <a href="service.html" className="nav-item nav-link">Servicios</a>
+                    <a href="product.html" className="nav-item nav-link">Productos</a>
+                    {/* <div className="nav-item dropdown">
                         <a href="index.html" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div className="dropdown-menu m-0">
                             <a href="price.html" className="dropdown-item">Pricing Plan</a>
@@ -25,8 +25,8 @@ const Navbar = () => {
                             <a href="blog.html" className="dropdown-item">Blog Grid</a>
                             <a href="detail.html" className="dropdown-item">Blog Detail</a>
                         </div>
-                    </div>
-                    <a href="contact.html" className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i className="bi bi-arrow-right"></i></a>
+                    </div> */}
+                    <a href="contact.html" className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contacto <i className="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </nav>
