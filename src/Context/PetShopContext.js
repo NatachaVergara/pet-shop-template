@@ -70,42 +70,42 @@ const UsePetShopContextProvider = ({ children }) => {
             id: 1,
             img: img1,
             alt: img1,
-            title: "Quality Pet Foods",
+            title: "Quality Pet Foods 1",
 
         },
         {
             id: 2,
             img: img2,
             alt: img2,
-            title: "Quality Pet Foods",
+            title: "Quality Pet Foods 2",
 
         },
         {
             id: 3,
             img: img3,
             alt: img3,
-            title: "Quality Pet Foods",
+            title: "Quality Pet Foods 3",
 
         },
         {
             id: 4,
             img: img1,
             alt: img1,
-            title: "Quality Pet Foods",
+            title: "Quality Pet Foods 4",
 
         },
         {
             id: 5,
             img: img2,
             alt: img2,
-            title: "Quality Pet Foods",
+            title: "Quality Pet Foods 5",
 
         },
         {
             id: 6,
             img: img3,
             alt: img3,
-            title: "Quality Pet Foods",
+            title: "Quality Pet Foods 6",
 
         },
 
@@ -157,7 +157,7 @@ const UsePetShopContextProvider = ({ children }) => {
 
 
     ]
-    // console.log(preciosDataCard)
+   
 
 
 

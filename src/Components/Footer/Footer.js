@@ -9,35 +9,23 @@ const Footer = () => {
                 <div className="container pt-5">
                     <div className="row g-5">
                         <div className="col-lg-3 col-md-6">
-                            <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Get In Touch</h5>
+                            <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Mantente en contacto</h5>
                             <p className="mb-4 text-start">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
-                            <p className="mb-2 text-start"><i className="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                            <p className="mb-2 text-start"><i className="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
-                            <p className="mb-0 text-start"><i className="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                            <p className="mb-2 text-start"><i className="bi bi-geo-alt text-primary me-2"></i>Calle 123, Floresta. CABA</p>
+                            <p className="mb-2 text-start"><i className="bi bi-envelope-open text-primary me-2"></i>info@veterinaria.com</p>
+                            <p className="mb-0 text-start"><i className="bi bi-telephone text-primary me-2"></i>12 345 6789</p>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Quick Links</h5>
+
+                        <div className="col-lg-4 col-md-6">
+                            <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Links del sitio</h5>
                             <div className="d-flex flex-column justify-content-start">
                                 <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Home</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>About Us</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Meet The Team</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</Link>
-                                <Link className="text-body text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</Link>
+                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>El equipo</Link>
+                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Servicios</Link>
+                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Productos</Link>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Popular Links</h5>
-                            <div className="d-flex flex-column justify-content-start">
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Home</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>About Us</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Meet The Team</Link>
-                                <Link className="text-body mb-2 text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</Link>
-                                <Link className="text-body text-start" to='/home'><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</Link>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-4 col-md-6">
                             <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
                             <form action="">
                                 <div className="input-group">
@@ -53,10 +41,10 @@ const Footer = () => {
                                 <Link className="btn btn-outline-primary btn-square" to='/home'><i className="bi bi-instagram"></i></Link>
                             </div>
                         </div>
-                        <div className="col-12 text-center text-body">
+                        {/* <div className="col-12 text-center text-body">
                             <Link className="text-body" to='/home'>Terms & Conditions</Link>
                             <span className="mx-1">|</span>
-                            <Link className="text-body" to='/home'>Privacy Policy</Link>
+                            <Link className="text-body" to='/home'>Poolitica</Link>
                             <span className="mx-1">|</span>
                             <Link className="text-body" to='/home'>Customer Support</Link>
                             <span className="mx-1">|</span>
@@ -65,7 +53,7 @@ const Footer = () => {
                             <Link className="text-body" to='/home'>Help</Link>
                             <span className="mx-1">|</span>
                             <Link className="text-body" to='/home'>FAQs</Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -73,10 +61,10 @@ const Footer = () => {
                 <div className="container">
                     <div className="row g-5">
                         <div className="col-md-6 text-center text-md-start">
-                            <p className="mb-md-0">&copy; <Link className="text-white" to='/home'>Your Site Name</Link>. All Rights Reserved.</p>
+                            <p className="mb-md-0">&copy; <Link className="text-white" to='/home'>Pet Shop</Link>. Todos los derechos reservados.</p>
                         </div>
                         <div className="col-md-6 text-center text-md-end">
-                            <p className="mb-0">Designed by <Link className="text-white" href="https://htmlcodex.com">HTML Codex</Link></p>
+                            <p className="mb-0">Designed by <a className="text-white" href="https://htmlcodex.com" target='_blank' rel="noreferrer" >HTML Codex</a></p>
                         </div>
                     </div>
                 </div>

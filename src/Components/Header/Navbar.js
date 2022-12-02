@@ -26,7 +26,12 @@ const Navbar = () => {
                             <a href="detail.html" className="dropdown-item">Blog Detail</a>
                         </div>
                     </div> */}
-                    <a href="contact.html" className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contacto <i className="bi bi-arrow-right"></i></a>
+                    <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, Necesito información`}
+                        target='_blank'
+                        rel="noreferrer"
+                        className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5"
+                    >Contacto <i className="bi bi-arrow-right"></i></a>
+
                 </div>
             </div>
         </nav>
