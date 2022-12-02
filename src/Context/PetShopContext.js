@@ -1,6 +1,14 @@
-import img1 from '../assets/img/product-1.png'
-import img2 from '../assets/img/product-2.png'
-import img3 from '../assets/img/product-3.png'
+import img1 from '../assets/img/product-1.png';
+import img2 from '../assets/img/product-2.png';
+import img3 from '../assets/img/product-3.png';
+import team1 from '../assets/img/team-1.jpg';
+import team2 from '../assets/img/team-2.jpg';
+import team3 from '../assets/img/team-3.jpg';
+import team4 from '../assets/img/team-4.jpg';
+import team5 from '../assets/img/team-5.jpg';
+
+
+
 import React, { createContext, useContext } from 'react'
 const ShopContext = createContext();
 
@@ -157,15 +165,66 @@ const UsePetShopContextProvider = ({ children }) => {
 
 
     ]
-   
 
+    const teamDataCard = [
+        {
+            id: 1,
+            nombre: 'Nombre Completo',
+            puesto: "Puesto",
+            img: team1,
+            twitter: '#',
+            instagram: '#',
+            facebook: '#',
+            linkedin: '#'
+        },
+        {
+            id: 2,
+            nombre: 'Nombre Completo',
+            puesto: "Puesto",
+            img: team2,
+            twitter: '#',
+            facebook: '#',
+            linkedin: '#',
+            instagram: '#',
+        },
+        {
+            id: 3,
+            nombre: 'Nombre Completo',
+            puesto: "Puesto",
+            img: team3,
+            twitter: '#',
+            facebook: '#',
+            linkedin: '#',
+            instagram: '#',
+        },
+        {
+            id: 4,
+            nombre: 'Nombre Completo',
+            puesto: "Puesto",
+            img: team4,
+            twitter: '#',
+            facebook: '#',
+            linkedin: '#',
+            instagram: '#',
+        },
+        {
+            id: 5,
+            nombre: 'Nombre Completo',
+            puesto: "Puesto",
+            img: team5,
+            twitter: '#',
+            facebook: '#',
+            linkedin: '#',
+            instagram: '#',
+        },
+    ]
 
 
 
 
 
     return (
-        <ShopContext.Provider value={{ serviceDataCard, productsDataCard, preciosDataCard }}>
+        <ShopContext.Provider value={{ serviceDataCard, productsDataCard, preciosDataCard, teamDataCard }}>
             {children}
         </ShopContext.Provider>
     )
