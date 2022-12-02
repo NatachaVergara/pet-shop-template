@@ -112,7 +112,52 @@ const UsePetShopContextProvider = ({ children }) => {
 
     ]
 
+    const preciosDataCard = [
+        {
+            id: 1,
+            titulo: "Plan Básico",
+            subTitulo: "Bronce",
+            precio: 2000,
+            beneficio1: "Si",
+            beneficio2: "No",
+            beneficio3: "No",
+            beneficio4: "No",
+            beneficio5: "No",
+            class1: 'bg-light text-center pt-5 mt-lg-5',
+            class2: 'text-center bg-primary p-4 mb-2',
 
+        },
+        {
+            id: 2,
+            titulo: "Plan medio",
+            subTitulo: "Plata",
+            precio: 2500,
+            beneficio1: "Si",
+            beneficio2: "Si",
+            beneficio3: "Si",
+            beneficio4: "No",
+            beneficio5: "No",
+            class1: '5g-light text-center pt-5',
+            class2: '5ext-center bg-dark p-4 mb-2',
+        },
+        {
+            id: 3,
+            titulo: "Plan Alto",
+            subTitulo: "Oro",
+            precio: 3500,
+            beneficio1: "Si",
+            beneficio2: "Si",
+            beneficio3: "Si",
+            beneficio4: "Si",
+            beneficio5: "Si",
+            class1: 'bg-light text-center pt-5 mt-lg-5',
+            class2: 'text-center bg-primary p-4 mb-2',
+        },
+
+
+
+    ]
+    // console.log(preciosDataCard)
 
 
 
@@ -120,7 +165,7 @@ const UsePetShopContextProvider = ({ children }) => {
 
 
     return (
-        <ShopContext.Provider value={{ serviceDataCard, productsDataCard }}>
+        <ShopContext.Provider value={{ serviceDataCard, productsDataCard, preciosDataCard }}>
             {children}
         </ShopContext.Provider>
     )
