@@ -64,7 +64,7 @@ const UsePetShopContextProvider = ({ children }) => {
             icon: "flaticon-dog display-1 text-primary me-4"
         },
         {
-            id: 5,
+            id: 6,
             title: "Tratamiento veterinario de mascotas",
             text: "Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit",
             link: '#',
