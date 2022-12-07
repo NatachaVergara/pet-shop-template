@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutHero from '../About/AboutHero'
+import AboutHero from './AboutHero'
 
 import Hero from './Hero'
 import Precios from './Precios'

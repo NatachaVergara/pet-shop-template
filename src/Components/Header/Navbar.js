@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
- 
+
 
     return (
         // <!-- Navbar Start -->
@@ -16,20 +16,10 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav ms-auto py-0">
-                    <Link to='/home' className="nav-item nav-link active">Home</Link>
+                    <Link to='/home' className="nav-item nav-link">Home</Link>
                     <Link to='/about' className="nav-item nav-link">El equipo</Link>
-                    <a href="service.html" className="nav-item nav-link">Servicios</a>
+                    <Link to='/servicios' className="nav-item nav-link">Servicios</Link>
                     <a href="product.html" className="nav-item nav-link">Productos</a>
-                    {/* <div className="nav-item dropdown">
-                        <a href="index.html" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div className="dropdown-menu m-0">
-                            <a href="price.html" className="dropdown-item">Pricing Plan</a>
-                            <a href="team.html" className="dropdown-item">The Team</a>
-                            <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                            <a href="blog.html" className="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" className="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div> */}
                     <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, Necesito información`}
                         target='_blank'
                         rel="noreferrer"
