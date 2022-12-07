@@ -11,6 +11,7 @@ const ServiceInfo = () => {
     //console.log(cardId)
 
 
+    // eslint-disable-next-line eqeqeq
     let service = serviceDataCard.find(({ id }) => id == cardId)
 
     // console.log(service)
@@ -19,7 +20,7 @@ const ServiceInfo = () => {
     useEffect(() => {
         setServicio(service);
         setLoading(false);
-    }, [])
+    }, [service])
 
 
     gotoTop()
