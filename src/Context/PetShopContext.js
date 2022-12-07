@@ -6,14 +6,12 @@ import team2 from '../assets/img/team-2.jpg';
 import team3 from '../assets/img/team-3.jpg';
 import team4 from '../assets/img/team-4.jpg';
 import team5 from '../assets/img/team-5.jpg';
-
-
-
 import React, { createContext, useContext } from 'react'
+
+//Esta constante es la que crea el context y la comparto en la linea 225 como ShopContext.Provider
 const ShopContext = createContext();
 
-
-
+//Esta es la funcion que voy a llamar para utilizar mi props en toda la app. 
 export const useContextShop = () => {
     return useContext(ShopContext)
 }
