@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useContextShop } from '../../Context/PetShopContext';
+import { title } from '../../utils/function';
 
 import Spinner from '../Spinner';
 
 const ProductoById = () => {
+
     // eslint-disable-next-line no-unused-vars
     const [active, setActive] = useState(false);
     const [producto, setProducto] = useState('');
@@ -20,6 +22,7 @@ const ProductoById = () => {
         setActive(true);
     }, [findProducto])
 
+    title(`Producto ${producto.title}`)
     // console.log(producto)
     return (
         <>
@@ -35,11 +38,13 @@ const ProductoById = () => {
 
                                 <div className="card-body">
                                     <h5 className="card-title"> </h5>
-                                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p className="card-text">Descripción general sobre el producto seleccionado por el cliente</p>
                                     <ul className="list-group list-group-flush my-5">
                                         <li className="list-group-item">Beneficios</li>
                                         <li className="list-group-item">Propiedades</li>
-                                        <li className="list-group-item">otro contenido</li>
+                                        <li className="list-group-item">Otro contenido</li>
+                                        <li className="list-group-item">Otro contenido</li>
+                                        <li className="list-group-item">Otro contenido</li>
                                     </ul>
                                     <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, ¿cuál es el precio de ${producto.title}?`} target='_blank' rel="noreferrer" className='btn btn-outline-success'> <span>Consultar precio</span> </a>
                                 </div>
