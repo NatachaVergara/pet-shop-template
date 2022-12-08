@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
+
+
 
 
 
@@ -16,10 +19,10 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav ms-auto py-0">
-                    <Link to='/home' className="nav-item nav-link">Home</Link>
-                    <Link to='/about' className="nav-item nav-link">El equipo</Link>
-                    <Link to='/servicios' className="nav-item nav-link">Servicios</Link>
-                    <a href="product.html" className="nav-item nav-link">Productos</a>
+                    <NavLink to='/home' className="nav-item nav-link  ">Inicio</NavLink>
+                    <NavLink to='/about' className="nav-item nav-link  ">El equipo</NavLink>
+                    <NavLink to='/servicios' className="nav-item nav-link ">Servicios</NavLink>
+                    <NavLink to='/productos' className="nav-item nav-link  ">Productos</NavLink>
                     <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, Necesito información`}
                         target='_blank'
                         rel="noreferrer"

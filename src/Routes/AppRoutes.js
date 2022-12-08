@@ -6,6 +6,8 @@ import About from '../Views/About'
 import NotFound from '../Views/NotFound'
 import ServiceInfo from '../Components/Services/ServiceInfo'
 import Servicios from '../Views/Servicios'
+import Productos from '../Views/Productos'
+import ProductoById from '../Components/Productos/ProductoById'
 
 const AppRoutes = () => {
 
@@ -17,6 +19,8 @@ const AppRoutes = () => {
             <Route path='/about' element={<About />} />
             <Route path='/servicios' element={<Servicios />} />
             <Route path='/servicios/:cardId' element={<ServiceInfo />} />
+            <Route path='/productos' element={<Productos />} />
+            <Route path='/producto/:productoId' element={<ProductoById />} />
 
 
             <Route path='*' element={<NotFound />} />
