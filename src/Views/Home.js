@@ -1,9 +1,10 @@
 import React from 'react'
 import HomeContainer from '../Components/Home'
-import { title } from '../utils/function';
+import { gotoTop, title } from '../utils/function';
 
 
 const Home = () => {
+  gotoTop()
   title('Inicio');
   return (
     <main>
