@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const PreciosCard = ({ preciosDataCard }) => {
@@ -37,7 +38,16 @@ const PreciosCard = ({ preciosDataCard }) => {
                             <span>1 Radiografía</span>
                             {preciosDataCard.beneficio4 === "Si" ? <i className="bi bi-check2 fs-4 text-primary"></i> : <i className="bi bi-x fs-4 text-danger"></i>}
                         </div>
-                        <a className='btn btn-primary text-uppercase py-2 px-4 my-3' href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, quiero contratar el servicio ${preciosDataCard.titulo} para mi mascota`} target='_blank' rel="noreferrer">Lo quiero </a>
+                        <div className="btn-group d-none d-md-inline" role="group">
+                            <button type="button" className="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lo quiero
+                            </button>
+                            <ul className="dropdown-menu">
+                                <li className=''><a href={`https://api.whatsapp.com/send?phone=+541124971986&text=Hola, quiero contratar el servicio ${preciosDataCard.titulo}`} target='_blank' rel="noreferrer" className='dropdown-item text-center d-flex justify-content-center'>Whatsapp web <box-icon type='logo' name='whatsapp'></box-icon></a></li>
+                                <li><Link className="dropdown-item text-center d-flex justify-content-center" to={`/contacto/Quiero contratar el servicio ${preciosDataCard.titulo}?`} >Email <box-icon name='envelope'></box-icon></Link></li>
+                            </ul>
+                        </div>                        
+                        <a className='ms-3  d-md-none btn btn-success text-center' href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, quiero contratar el servicio ${preciosDataCard.titulo} para mi mascota`} target='_blank' rel="noreferrer">Lo quiero </a>
                     </div>
                 </div>
             </div>

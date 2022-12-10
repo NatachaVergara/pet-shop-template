@@ -4,7 +4,7 @@ import { useContextShop } from '../../Context/PetShopContext'
 
 const ServiceCard = () => {
     const { serviceDataCard } = useContextShop();
-    // console.log(serviceDataCard)
+
 
     return (
         <>

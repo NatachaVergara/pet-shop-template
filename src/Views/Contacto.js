@@ -1,10 +1,10 @@
 import React from 'react'
 import FomularioContacto from '../Components/Contacto/FomularioContacto'
-import { title } from '../utils/function'
+import { gotoTop, title } from '../utils/function'
 
 const Contacto = () => {
     title('Contacto');
-
+    gotoTop();
 
 
     return (

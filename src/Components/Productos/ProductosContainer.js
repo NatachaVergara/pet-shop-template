@@ -10,15 +10,22 @@ const ProductosContainer = () => {
   return (
     <>
       {
-        !active ? <Spinner /> : <div className='container d-flex flex-wrap justify-content-around align-items-center my-3 my-md-5'>
-          {
-            productsDataCard && productsDataCard.map((e, i) => (
-              <ProductoCard key={i} props={e} />
-            ))
-          }
+        !active ? <Spinner /> :
+          <div className='container-fluid py-5'>
+            <div className="border-start border-5 border-primary ps-5 ms-5 mb-5" style={{ maxWidth: "90%" }}>
+              <h6 className="text-primary text-uppercase">Productos</h6>
+              <h6 className="display-5 text-uppercase mb-0">Productos para tu mascota</h6>
+            </div>
+            <div className='container d-flex flex-wrap justify-content-around align-items-center my-3 my-md-5'>
 
+              {
+                productsDataCard && productsDataCard.map((e, i) => (
+                  <ProductoCard key={i} props={e} />
+                ))
+              }
+            </div>
 
-        </div>
+          </div>
       }
     </>
   )

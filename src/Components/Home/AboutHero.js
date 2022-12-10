@@ -4,7 +4,7 @@ import about from '../../assets/img/about.jpg'
 const AboutHero = () => {
     return (
         // <!-- About Start -->
-        <div className="container-fluid py-5">
+        <div className="container-fluid py-5" id='sobreNosotros'>
             <div className="container">
                 <div className="row gx-5">
                     <div className="col-lg-5 mb-5 mb-lg-0" style={{ minHeight: "auto" }}>

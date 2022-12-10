@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Services from '../Components/Services/Services'
 import { gotoTop, title } from '../utils/function'
 
@@ -9,8 +10,8 @@ const Servicios = () => {
 
 
     return (
-        <main>
-            <Services />
+        <main className='container-fluid py-5'>
+            <Services/>
         </main>
     )
 }

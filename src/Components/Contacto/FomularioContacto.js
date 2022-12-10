@@ -55,7 +55,7 @@ const FomularioContacto = () => {
             <div className="container">
                 <div className="border-start border-5 border-primary ps-5 mb-5" style={{ maxWidth: "600px" }}>
                     {/* <h6 className="text-primary text-uppercase">Contactese con nosotros</h6> */}
-                    <h1 className="display-5 text-uppercase mb-0">Contactese con nosotros</h1>
+                    <h1 className="display-5 text-uppercase mb-0 text-start">Contáctese con nosotros</h1>
                 </div>
                 <div className="row g-5">
                     <div className="col-lg-7">
