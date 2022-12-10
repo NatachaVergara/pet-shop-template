@@ -1,9 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import { useParams } from 'react-router-dom';
 
 const FomularioContacto = () => {
     const form = useRef();
+    const { producto } = useParams();
+    // eslint-disable-next-line no-unused-vars
+    // const [nombre, setNombre] = useState();
+    // const [email, setEmail] = useState();
+    const [razon, setRazon] = useState(producto ? producto : "");
+    // const [mensaje, setMensaje] = useState();
+    // eslint-disable-next-line no-unused-vars
+    //const [nombreProducto, setProducto] = useState(producto ? producto : razon)
+
+    // let nombreProducto = producto ? producto : ""
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -13,7 +24,9 @@ const FomularioContacto = () => {
                 console.log(result);
                 if (result.status === 200) {
                     Swal.fire({
-                        title: 'Su mensaje ha sido entregado. En la brevedad nos estaremos contactando',
+                        title: `Su mensaje ha sido entregado.
+                                En la brevedad nos estaremos contactando.
+                                Gracias`,
                         showClass: {
                             popup: 'animate__animated animate__fadeInDown'
                         },
@@ -21,6 +34,8 @@ const FomularioContacto = () => {
                             popup: 'animate__animated animate__fadeOutUp'
                         }
                     })
+                    form.current.reset();
+                    setRazon('');
                 }
 
             }, (error) => {
@@ -28,7 +43,6 @@ const FomularioContacto = () => {
                 Swal.fire('Hubo un error, por favor intente más tarde. Gracias')
             });
 
-        form.current.reset();
 
     }
 
@@ -48,13 +62,13 @@ const FomularioContacto = () => {
                         <form ref={form} onSubmit={sendEmail}>
                             <div className="row g-3">
                                 <div className="col-12">
-                                    <input type="text" className="form-control bg-light border-0 px-4" placeholder="Nombre" name="user_name" style={{ height: "55px" }} required />
+                                    <input type="text" className="form-control bg-light border-0 px-4" placeholder="Nombre" name="from_name" style={{ height: "55px" }} required />
                                 </div>
                                 <div className="col-12">
                                     <input type="email" className="form-control bg-light border-0 px-4" placeholder="Email" name="user_email" style={{ height: "55px" }} required />
                                 </div>
                                 <div className="col-12">
-                                    <input type="text" className="form-control bg-light border-0 px-4" placeholder="Razón del mensaje" name="razon" style={{ height: "55px" }} required />
+                                    <input type="text" className="form-control bg-light border-0 px-4" placeholder="Razón del mensaje" name="razon" style={{ height: "55px" }} value={razon} onChange={(e) => setRazon(e.target.value)} required />
                                 </div>
                                 <div className="col-12">
                                     <textarea className="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Mensaje" name="message" required></textarea>
@@ -94,7 +108,6 @@ const FomularioContacto = () => {
                                     title="Mapa"
                                     frameborder="0"
                                     style={{ height: "205px", border: "0" }}
-                                    allowfullscreen=""
                                     ariaHidden="false"
                                     tabIndex="0" />
                             </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useContextShop } from '../../Context/PetShopContext';
 import { title } from '../../utils/function';
 
@@ -52,7 +52,7 @@ const ProductoById = () => {
                                         </button>
                                         <ul className="dropdown-menu">
                                             <li className=''><a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, ¿cuál es el precio de ${producto.title}?`} target='_blank' rel="noreferrer" className='dropdown-item text-center d-flex justify-content-center'>Whatsapp web <box-icon type='logo' name='whatsapp'></box-icon></a></li>
-                                            <li><a className="dropdown-item text-center d-flex justify-content-center" href="/home">Email   <box-icon name='envelope'></box-icon></a></li>
+                                            <li><Link className="dropdown-item text-center d-flex justify-content-center" to={`/contacto/¿cuál es el precio de ${producto.title}?`} >Email <box-icon name='envelope'></box-icon></Link></li>
                                         </ul>
                                     </div>
                                     <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, ¿cuál es el precio de ${producto.title}?`} target='_blank' rel="noreferrer" className='ms-3  d-md-none btn btn-success text-center'>Consultar precio <br></br> <box-icon type='logo' name='whatsapp'></box-icon></a>

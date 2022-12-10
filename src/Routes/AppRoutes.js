@@ -23,6 +23,7 @@ const AppRoutes = () => {
             <Route path='/productos' element={<Productos />} />
             <Route path='/producto/:productoId' element={<ProductoById />} />
             <Route path='/contacto' element={<Contacto />} />
+            <Route path='/contacto/:producto' element={<Contacto />} />
 
             <Route path='*' element={<NotFound />} />
         </Routes>
