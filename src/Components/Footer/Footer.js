@@ -13,7 +13,7 @@ const Footer = () => {
                             <p className="mb-4 text-start">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
                             <p className="mb-2 text-start"><i className="bi bi-geo-alt text-primary me-2"></i>Calle 123, Floresta. CABA</p>
                             <p className="mb-2 text-start"><i className="bi bi-envelope-open text-primary me-2"></i>info@veterinaria.com</p>
-                            <p className="mb-0 text-start"><i className="bi bi-telephone text-primary me-2"></i>12 345 6789</p>
+                            <p className="mb-0 text-start"><i className="bi bi-whatsapp text-primary me-2"></i>12 345 6789</p>
                         </div>
 
                         <div className="col-lg-4 col-md-6">

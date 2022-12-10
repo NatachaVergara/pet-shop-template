@@ -46,7 +46,18 @@ const ProductoById = () => {
                                         <li className="list-group-item">Otro contenido</li>
                                         <li className="list-group-item">Otro contenido</li>
                                     </ul>
-                                    <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, ¿cuál es el precio de ${producto.title}?`} target='_blank' rel="noreferrer" className='btn btn-outline-success'> <span>Consultar precio</span> </a>
+                                    <div className="btn-group d-none d-md-inline" role="group">
+                                        <button type="button" className="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Consultar precio
+                                        </button>
+                                        <ul className="dropdown-menu">
+                                            <li className=''><a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, ¿cuál es el precio de ${producto.title}?`} target='_blank' rel="noreferrer" className='dropdown-item text-center d-flex justify-content-center'>Whatsapp web <box-icon type='logo' name='whatsapp'></box-icon></a></li>
+                                            <li><a className="dropdown-item text-center d-flex justify-content-center" href="/home">Email   <box-icon name='envelope'></box-icon></a></li>
+                                        </ul>
+                                    </div>
+                                    <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, ¿cuál es el precio de ${producto.title}?`} target='_blank' rel="noreferrer" className='ms-3  d-md-none btn btn-success text-center'>Consultar precio <br></br> <box-icon type='logo' name='whatsapp'></box-icon></a>
+
+
                                 </div>
                             </div>
                         </div>
