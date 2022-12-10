@@ -28,7 +28,7 @@ const TopBar = () => {
                         <i className="bi bi-whatsapp fs-1 text-primary me-3"></i>
                         <div className="text-start">
                             <h6 className="text-uppercase mb-1">Llamanos</h6>
-                            <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, Necesito información`} target='_blank' rel="noreferrer" className='text-dark'> <span>12 345 6789</span> </a>
+                            <a href={`https://api.whatsapp.com/send?phone=+541124971986&text=Hola, Necesito información`} target='_blank' rel="noreferrer" className='text-dark'> <span>12 345 6789</span> </a>
 
                         </div>
                     </div>
