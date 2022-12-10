@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container-fluid bg-light mt-5 py-5">
                 <div className="container pt-5">
                     <div className="row g-5">
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-4 col-md-6">
                             <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Mantente en contacto</h5>
                             <p className="mb-4 text-start">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
                             <p className="mb-2 text-start"><i className="bi bi-geo-alt text-primary me-2"></i>Calle 123, Floresta. CABA</p>
