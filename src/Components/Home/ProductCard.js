@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { useContextShop } from '../../Context/PetShopContext'
 
 const ProductCard = () => {
@@ -13,9 +15,8 @@ const ProductCard = () => {
                     <div className="product-item position-relative bg-light d-flex flex-column text-center">
                         <img className="img-fluid mb-4" src={e.img} alt={e.img} />
                         <h6 className="text-uppercase">{e.title} </h6>
-                        {/* <h5 className="text-primary mb-0"> Más información </h5> */}
                         <div className="btn-action d-flex flex-wrap justify-content-center mt-2">
-                            <a href={`https://api.whatsapp.com/send?phone=0123456789&text=Hola, Necesito mas información del producto ${e.title}`} target='_blank' rel="noreferrer" className="btn btn-primary py-2 px-3" >Quiero información </a>
+                            <Link to={`/producto/${e.id}`} className="btn btn-primary py-2 px-3"> Ver más</Link>
                         </div>
                     </div>
                 </div>
