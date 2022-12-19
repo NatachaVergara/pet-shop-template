@@ -1,12 +1,14 @@
-import img1 from '../assets/img/product-1.png';
-import img2 from '../assets/img/product-2.png';
-import img3 from '../assets/img/product-3.png';
+
 import team1 from '../assets/img/team-1.jpg';
 import team2 from '../assets/img/team-2.jpg';
 import team3 from '../assets/img/team-3.jpg';
 import team4 from '../assets/img/team-4.jpg';
 import team5 from '../assets/img/team-5.jpg';
-import React, { createContext, useContext } from 'react'
+// eslint-disable-next-line no-unused-vars
+import React, { createContext, useContext, useEffect, useState } from 'react'
+
+// import axios from 'axios';
+// import { useEffect } from 'react';
 
 //Esta constante es la que crea el context y la comparto en la linea 225 como ShopContext.Provider
 const ShopContext = createContext();
@@ -20,6 +22,27 @@ export const useContextShop = () => {
 
 
 const UsePetShopContextProvider = ({ children }) => {
+    const [productsDataCard, setProductsDataCard] = useState([])
+    const sheetUrl = `https://docs.google.com/spreadsheets/d/1qSsR9LCt8fP4FFtpjXKKmgFEUC1tmmYKI6vqLrK76fk/gviz/tq?`
+
+    useEffect(() => {
+        const getProducts = async () => {
+
+            fetch(sheetUrl)
+                .then(res => res.text())
+                .then(rep => {
+                   // console.log(rep)
+                    const data = JSON.parse(rep.substr(47).slice(0, -2));
+                   //  console.log(data.table.rows)
+                     setProductsDataCard(data.table.rows)                    
+                })
+        }
+        getProducts()
+
+    }, [sheetUrl])
+  //  console.log(productsDataCard)
+
+
 
     const serviceDataCard = [
         {
@@ -71,52 +94,52 @@ const UsePetShopContextProvider = ({ children }) => {
 
     ]
 
-    const productsDataCard = [
-        {
-            id: 1,
-            img: img1,
-            alt: img1,
-            title: "Quality Pet Foods 1",
+    // const productsDataCard = [
+    //     {
+    //         id: 1,
+    //         img: img1,
+    //         alt: img1,
+    //         title: "Quality Pet Foods 1",
 
-        },
-        {
-            id: 2,
-            img: img2,
-            alt: img2,
-            title: "Quality Pet Foods 2",
+    //     },
+    //     {
+    //         id: 2,
+    //         img: img2,
+    //         alt: img2,
+    //         title: "Quality Pet Foods 2",
 
-        },
-        {
-            id: 3,
-            img: img3,
-            alt: img3,
-            title: "Quality Pet Foods 3",
+    //     },
+    //     {
+    //         id: 3,
+    //         img: img3,
+    //         alt: img3,
+    //         title: "Quality Pet Foods 3",
 
-        },
-        {
-            id: 4,
-            img: img1,
-            alt: img1,
-            title: "Quality Pet Foods 4",
+    //     },
+    //     {
+    //         id: 4,
+    //         img: img1,
+    //         alt: img1,
+    //         title: "Quality Pet Foods 4",
 
-        },
-        {
-            id: 5,
-            img: img2,
-            alt: img2,
-            title: "Quality Pet Foods 5",
+    //     },
+    //     {
+    //         id: 5,
+    //         img: img2,
+    //         alt: img2,
+    //         title: "Quality Pet Foods 5",
 
-        },
-        {
-            id: 6,
-            img: img3,
-            alt: img3,
-            title: "Quality Pet Foods 6",
+    //     },
+    //     {
+    //         id: 6,
+    //         img: img3,
+    //         alt: img3,
+    //         title: "Quality Pet Foods 6",
 
-        },
+    //     },
 
 
-    ]
+    // ]
 
     const preciosDataCard = [
         {

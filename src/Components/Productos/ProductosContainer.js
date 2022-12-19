@@ -7,6 +7,10 @@ const ProductosContainer = () => {
   // eslint-disable-next-line no-unused-vars
   const [active, setActive] = useState(true);
   const { productsDataCard } = useContextShop();
+  //console.log(productsDataCard)
+
+  // productsDataCard.map(e => { console.log(e.c) })
+
   return (
     <>
       {
@@ -20,7 +24,7 @@ const ProductosContainer = () => {
 
               {
                 productsDataCard && productsDataCard.map((e, i) => (
-                  <ProductoCard key={i} props={e} />
+                  <ProductoCard key={i} props={e.c} />
                 ))
               }
             </div>
