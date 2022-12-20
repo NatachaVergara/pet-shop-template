@@ -3,7 +3,7 @@ import PreciosCard from './PreciosCard'
 import { useContextShop } from '../../Context/PetShopContext'
 const Precios = () => {
     const { preciosDataCard } = useContextShop()
-
+    
     return (
         // <!-- Pricing Plan Start -->
         <div className="container-fluid py-5">
@@ -14,7 +14,7 @@ const Precios = () => {
                 </div>
                 <div className="row g-5">
                     {preciosDataCard && preciosDataCard.map((e, i) => (
-                        <PreciosCard preciosDataCard={e} key={i} />
+                        <PreciosCard preciosDataCard={e.c} key={i} />
 
                     ))}
 

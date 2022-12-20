@@ -24,7 +24,7 @@ const ProductosContainer = () => {
 
               {
                 productsDataCard && productsDataCard.map((e, i) => (
-                  <ProductoCard key={i} props={e.c} />
+                  <ProductoCard key={i} producto={e.c} />
                 ))
               }
             </div>

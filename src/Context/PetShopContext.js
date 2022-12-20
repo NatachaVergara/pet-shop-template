@@ -6,6 +6,7 @@ import team4 from '../assets/img/team-4.jpg';
 import team5 from '../assets/img/team-5.jpg';
 // eslint-disable-next-line no-unused-vars
 import React, { createContext, useContext, useEffect, useState } from 'react'
+import { preciosDB, productosDB } from '../utils/base_url';
 
 // import axios from 'axios';
 // import { useEffect } from 'react';
@@ -23,24 +24,37 @@ export const useContextShop = () => {
 
 const UsePetShopContextProvider = ({ children }) => {
     const [productsDataCard, setProductsDataCard] = useState([])
-    const sheetUrl = `https://docs.google.com/spreadsheets/d/1qSsR9LCt8fP4FFtpjXKKmgFEUC1tmmYKI6vqLrK76fk/gviz/tq?`
+    const [preciosDataCard, setPreciosDataCard] = useState([])
 
     useEffect(() => {
         const getProducts = async () => {
 
-            fetch(sheetUrl)
+            fetch(productosDB)
                 .then(res => res.text())
                 .then(rep => {
-                   // console.log(rep)
+                    //console.log(rep)
                     const data = JSON.parse(rep.substr(47).slice(0, -2));
-                   //  console.log(data.table.rows)
-                     setProductsDataCard(data.table.rows)                    
+                    //  console.log(data.table)
+                    setProductsDataCard(data.table.rows)
                 })
         }
         getProducts()
 
-    }, [sheetUrl])
-  //  console.log(productsDataCard)
+
+        const getPrecios = async () => {
+            fetch(preciosDB)
+                .then(res => res.text())
+                .then(rep => {
+                    const data = JSON.parse(rep.substr(47).slice(0, -2));
+                    //console.log(data.table.rows);
+                    setPreciosDataCard(data.table.rows)
+                })
+        }
+        getPrecios()
+
+
+    }, [])
+    //  console.log(productsDataCard)
 
 
 
@@ -94,98 +108,6 @@ const UsePetShopContextProvider = ({ children }) => {
 
     ]
 
-    // const productsDataCard = [
-    //     {
-    //         id: 1,
-    //         img: img1,
-    //         alt: img1,
-    //         title: "Quality Pet Foods 1",
-
-    //     },
-    //     {
-    //         id: 2,
-    //         img: img2,
-    //         alt: img2,
-    //         title: "Quality Pet Foods 2",
-
-    //     },
-    //     {
-    //         id: 3,
-    //         img: img3,
-    //         alt: img3,
-    //         title: "Quality Pet Foods 3",
-
-    //     },
-    //     {
-    //         id: 4,
-    //         img: img1,
-    //         alt: img1,
-    //         title: "Quality Pet Foods 4",
-
-    //     },
-    //     {
-    //         id: 5,
-    //         img: img2,
-    //         alt: img2,
-    //         title: "Quality Pet Foods 5",
-
-    //     },
-    //     {
-    //         id: 6,
-    //         img: img3,
-    //         alt: img3,
-    //         title: "Quality Pet Foods 6",
-
-    //     },
-
-
-    // ]
-
-    const preciosDataCard = [
-        {
-            id: 1,
-            titulo: "Plan Básico",
-            subTitulo: "Bronce",
-            precio: 2000,
-            beneficio1: "Si",
-            beneficio2: "No",
-            beneficio3: "No",
-            beneficio4: "No",
-            beneficio5: "No",
-            class1: 'bg-light text-center pt-5 mt-lg-5',
-            class2: 'text-center bg-primary p-4 mb-2',
-
-        },
-        {
-            id: 2,
-            titulo: "Plan medio",
-            subTitulo: "Plata",
-            precio: 2500,
-            beneficio1: "Si",
-            beneficio2: "Si",
-            beneficio3: "Si",
-            beneficio4: "No",
-            beneficio5: "No",
-            class1: '5g-light text-center pt-5',
-            class2: '5ext-center bg-dark p-4 mb-2',
-        },
-        {
-            id: 3,
-            titulo: "Plan Alto",
-            subTitulo: "Oro",
-            precio: 3500,
-            beneficio1: "Si",
-            beneficio2: "Si",
-            beneficio3: "Si",
-            beneficio4: "Si",
-            beneficio5: "Si",
-            class1: 'bg-light text-center pt-5 mt-lg-5',
-            class2: 'text-center bg-primary p-4 mb-2',
-        },
-
-
-
-    ]
 
     const teamDataCard = [
         {
