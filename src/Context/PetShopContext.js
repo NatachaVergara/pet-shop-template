@@ -1,15 +1,5 @@
-
-import team1 from '../assets/img/team-1.jpg';
-import team2 from '../assets/img/team-2.jpg';
-import team3 from '../assets/img/team-3.jpg';
-import team4 from '../assets/img/team-4.jpg';
-import team5 from '../assets/img/team-5.jpg';
-// eslint-disable-next-line no-unused-vars
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { preciosDB, productosDB } from '../utils/base_url';
-
-// import axios from 'axios';
-// import { useEffect } from 'react';
+import { empleadosDB, preciosDB, productosDB } from '../utils/base_url';
 
 //Esta constante es la que crea el context y la comparto en la linea 225 como ShopContext.Provider
 const ShopContext = createContext();
@@ -25,6 +15,9 @@ export const useContextShop = () => {
 const UsePetShopContextProvider = ({ children }) => {
     const [productsDataCard, setProductsDataCard] = useState([])
     const [preciosDataCard, setPreciosDataCard] = useState([])
+    const [teamDataCard, setTeamDataCard] = useState([])
+
+
 
     useEffect(() => {
         const getProducts = async () => {
@@ -52,10 +45,20 @@ const UsePetShopContextProvider = ({ children }) => {
         }
         getPrecios()
 
+        const getEmpleados = async () => {
+            fetch(empleadosDB)
+                .then(res => res.text())
+                .then(rep => {
+                    const data = JSON.parse(rep.substr(47).slice(0, -2));
+                    //console.log(data.table.rows)
+                    setTeamDataCard(data.table.rows)
+                })
+        }
+        getEmpleados();
+
 
     }, [])
-    //  console.log(productsDataCard)
-
+   
 
 
     const serviceDataCard = [
@@ -106,60 +109,6 @@ const UsePetShopContextProvider = ({ children }) => {
             icon: "flaticon-vaccine display-1 text-primary me-4"
         },
 
-    ]
-
-
-    const teamDataCard = [
-        {
-            id: 1,
-            nombre: 'Nombre Completo',
-            puesto: "Puesto",
-            img: team1,
-            twitter: '#',
-            instagram: '#',
-            facebook: '#',
-            linkedin: '#'
-        },
-        {
-            id: 2,
-            nombre: 'Nombre Completo',
-            puesto: "Puesto",
-            img: team2,
-            twitter: '#',
-            facebook: '#',
-            linkedin: '#',
-            instagram: '#',
-        },
-        {
-            id: 3,
-            nombre: 'Nombre Completo',
-            puesto: "Puesto",
-            img: team3,
-            twitter: '#',
-            facebook: '#',
-            linkedin: '#',
-            instagram: '#',
-        },
-        {
-            id: 4,
-            nombre: 'Nombre Completo',
-            puesto: "Puesto",
-            img: team4,
-            twitter: '#',
-            facebook: '#',
-            linkedin: '#',
-            instagram: '#',
-        },
-        {
-            id: 5,
-            nombre: 'Nombre Completo',
-            puesto: "Puesto",
-            img: team5,
-            twitter: '#',
-            facebook: '#',
-            linkedin: '#',
-            instagram: '#',
-        },
     ]
 
 

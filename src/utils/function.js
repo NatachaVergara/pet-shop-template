@@ -5,7 +5,7 @@ export const gotoTop = () => {
 
 
 export const title = (value) => {
-  let newValue = `Build Better - ${value}`
+  let newValue = `PetShop - ${value}`
   return document.title = newValue;
 }
 

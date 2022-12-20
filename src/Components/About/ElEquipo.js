@@ -5,7 +5,7 @@ import EquipoCard from './EquipoCard';
 
 const ElEquipo = () => {
     const { teamDataCard } = useContextShop();
-
+    
 
     return (
         // <!-- Team Start -->
@@ -17,7 +17,7 @@ const ElEquipo = () => {
                 </div>
                 <ReactOwlCarousel className="owl-carousel team-carousel" loop autoWidth={true} center={true} autoplay={true} margin={2} >
                     {teamDataCard.map((e, i) => (
-                        <EquipoCard props={e} key={i} />
+                        <EquipoCard props={e.c} key={i} />
                     ))}
                 </ReactOwlCarousel>
             </div>
